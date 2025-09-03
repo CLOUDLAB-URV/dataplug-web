@@ -44,6 +44,7 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import { dataCockpitInstallation, dataCockpitInstallationWithExtras } from '../data/dataCockpit';
+import { getAssetPath } from '../utils';
 import { pyrunUrl } from '../data/pyrun';
 import { formatExamples, allExamplesUrl } from '../data/examples';
 
@@ -296,7 +297,7 @@ results = bag.map(lambda slice: len(slice.get().split('>')) - 1).compute()`;
                         <Link href="/" style={{ textDecoration: 'none' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer' }}>
                                 <Image
-                                    src="/logo.svg"
+                                    src={getAssetPath("/logo.svg")}
                                     alt="DataPlug Logo"
                                     width={28}
                                     height={28}

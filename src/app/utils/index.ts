@@ -26,4 +26,10 @@ export const formatDuration = (seconds: number): string => {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   return `${hours}h ${minutes}m`;
+};
+
+// Utility function to handle asset paths for GitHub Pages
+export const getAssetPath = (path: string): string => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/dataplug-web' : '';
+  return `${basePath}${path}`;
 }; 

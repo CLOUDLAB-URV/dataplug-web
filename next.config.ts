@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   // Configuración para GitHub Pages
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.GITHUB_ACTIONS ? '/dataplug_web' : '',
-  assetPrefix: process.env.GITHUB_ACTIONS ? '/dataplug_web/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/dataplug-web' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/dataplug-web/' : '',
   
   turbopack: {
     rules: {

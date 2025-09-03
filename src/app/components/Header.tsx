@@ -5,6 +5,7 @@ import { Layout, Row, Col, Typography, Space, Button } from 'antd';
 import { BookOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getAssetPath } from '../utils';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
@@ -29,7 +30,7 @@ export default function Header({ showPyRun = true }: HeaderProps) {
         <Col>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <Image
-              src="/logo.svg"
+              src={getAssetPath("/logo.svg")}
               alt="DataPlug Logo"
               width={90}
               height={90}

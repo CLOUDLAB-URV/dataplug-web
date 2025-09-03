@@ -5,6 +5,7 @@ import { Typography, Space, Button } from 'antd';
 import { RocketOutlined, PlayCircleOutlined, DatabaseOutlined, CloudOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getAssetPath } from '../../utils';
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -95,7 +96,7 @@ export default function HeroSection() {
               filter: 'drop-shadow(0 0 30px rgba(100, 200, 255, 0.3))'
             }}>
               <Image
-                src="/logo.svg"
+                src={getAssetPath("/logo.svg")}
                 alt="DataPlug Logo"
                 width={200}
                 height={200}

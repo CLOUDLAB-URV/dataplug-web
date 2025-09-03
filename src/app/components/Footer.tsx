@@ -4,6 +4,7 @@ import React from 'react';
 import { Layout, Row, Col, Typography, Space, Divider, List } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 import Image from 'next/image';
+import { getAssetPath } from '../utils';
 
 const { Footer: AntFooter } = Layout;
 const { Title, Paragraph } = Typography;
@@ -24,7 +25,7 @@ export default function Footer({ showPyRun = true }: FooterProps) {
           <Col xs={24} md={6}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: 16 }}>
               <Image
-                src="/logo.svg"
+                src={getAssetPath("/logo.svg")}
                 alt="DataPlug Logo"
                 width={28}
                 height={28}
