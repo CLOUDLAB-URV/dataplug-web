@@ -28,8 +28,8 @@ export const formatDuration = (seconds: number): string => {
   return `${hours}h ${minutes}m`;
 };
 
-// Utility function to handle asset paths for GitHub Pages
+// Utility function to handle asset paths
 export const getAssetPath = (path: string): string => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/dataplug-web' : '';
-  return `${basePath}${path}`;
+  // No base path needed since we're hosting at root domain
+  return path;
 }; 
